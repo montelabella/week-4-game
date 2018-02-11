@@ -5,22 +5,22 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-
 </head>
 <link href="https://fonts.googleapis.com/css?family=Alice" rel="stylesheet">
-<body>
+
+<body onload="startGame()">
 	<div id="container-fluid">
 	<div id = "wrapper">
 
-		<h1><span><strong><img src="assets/images/logo.png" width="500"></STRONG></STRONG><span></h1>
+		<h1><span><strong><img src="assets/images/logo.png" width="500"></STRONG></span></h1>
 
-		<div id="instructions"><strong>
-			<p><h4>Rules of the game!</h4><hr>You will be given a random number at the start of the game.</p>
-			<p> There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
-			<p> You win the game by matching your total score to the random number. You lose the game if your total score goes above the random number. </p>
-			<p> Each time the game starts, the game will change the values of each crystal.</p>
-		</strong></div>
+		<div id="instructions">			
+				<p><h4>Rules of the game!</h4><hr></hr>	You will be given a random number at the start of the game.</p>
+				<p> There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
+				<p> You win the game by matching your total score to the random number. You lose the game if your total score goes above the random number. </p>
+				<p> Each time the game starts, the game will change the values of each crystal.</p>
+			
+		</div>
 
 		<div class = "container">
 			<div id="guessingNumber">
@@ -34,14 +34,15 @@
 			</div>
 		</div>
 
-		<div class="crystalImage">
-			<div id="crystals">
-				<img src= "assets/images/purple.jpg" width="100" height="100">
-				<img src= "assets/images/blue.jpg"width="100" height="100">
-				<img src= "assets/images/pink.jpg"width="100" height="100">
-				<img src= "assets/images/red.jpg"width="100" height="100">
-				
-			</div>
+		<div class="crystalImage" onclick="checkValue(event)">
+				<img src= "assets/images/purple.jpg" id="purple" width="100" height="100">
+
+				<img src= "assets/images/blue.jpg" id="blue" width="100" height="100" >
+
+				<img src= "assets/images/pink.jpg" id="pink" width="100" height="100">
+
+				<img src= "assets/images/red.jpg" id="red" width="100" height="100">				
+
 		</div>
 		
 
@@ -56,7 +57,6 @@
 	<!-- adding jQuery -->
 	<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
 	<script src="assets/javascript/game.js"></script>
-	
 	</div>
 </body>
 </html>
